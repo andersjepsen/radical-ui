@@ -1,5 +1,8 @@
 {
-  "name": "radical-ui",
+  "name": "@andersjepsen/radical-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/andersjepsen"
+  },
   "version": "0.0.1",
   "description": "a radical design system",
   "author": "Anders Jepsen",
