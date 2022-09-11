@@ -1,6 +1,5 @@
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-
 import Avatar from "./Avatar";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -13,3 +12,8 @@ export default {
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
 export const Primary = Template.bind({});
+
+Primary.args = {
+  src: "https://i.pravatar.cc/100",
+  alt: "John Doe",
+};
