@@ -19,6 +19,10 @@ export const {
       ...gray,
       //overlays
       ...blackA,
+
+      //colors
+      white: "#fff",
+      black: "#000",
     },
     space: {
       1: "4px",
@@ -47,7 +51,11 @@ export const {
       8: "64px",
       9: "80px",
     },
-    borderWidths: {},
+    borderWidths: {
+      1: "1px",
+      2: "2px",
+      3: "4px",
+    },
     borderStyles: {},
     radii: {
       sm: "2px",
