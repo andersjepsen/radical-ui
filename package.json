@@ -20,6 +20,7 @@
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-label": "^1.0.0",
     "@radix-ui/react-progress": "^1.0.0",
+    "@radix-ui/react-slider": "^1.0.0",
     "@stitches/react": "^1.2.8"
   },
   "devDependencies": {
