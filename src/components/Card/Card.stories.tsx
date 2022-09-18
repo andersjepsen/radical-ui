@@ -12,7 +12,7 @@ export default {
 const Template: ComponentStory<typeof Card> = (args) => (
   <Card {...args} css={{ width: "300px" }}>
     <Card.Header>An enticing header</Card.Header>
-    <Card.Content>Exiting content</Card.Content>
+    <Card.Body>Exiting body</Card.Body>
     <Card.Footer>Footer stuff</Card.Footer>
   </Card>
 );

@@ -1,35 +1,26 @@
-import React from "react";
 import { styled, theme } from "../../../stitches.config";
+import Box from "../Box";
+import Footer from "../Footer";
+import Header from "../Header";
 
-const CardComponent = styled("div", {
+const CardComponent = styled(Box, {
   border: `1px solid ${theme.colors.blackA7}`,
   borderRadius: theme.radii.md,
   backgroundColor: theme.colors.white,
-
-  variants: {
-    padding: {
-      sm: {
-        padding: `${theme.space[1]} ${theme.space[2]}`,
-      },
-      md: {
-        padding: `${theme.space[2]} ${theme.space[3]}`,
-      },
-      lg: {
-        padding: `${theme.space[3]} ${theme.space[4]}`,
-      },
-    },
+  defaultVariants: {
+    overflow: "hidden",
   },
 });
 
-const CardHeader = styled("div", {});
+const CardHeader = styled(Header, {});
 
-const CardContent = styled("div", {});
+const CardBody = styled(Box, { defaultVariants: { flex: true } });
 
-const CardFooter = styled("div", {});
+const CardFooter = styled(Footer, {});
 
 const Card = Object.assign(CardComponent, {
   Header: CardHeader,
-  Content: CardContent,
+  Body: CardBody,
   Footer: CardFooter,
 });
 
