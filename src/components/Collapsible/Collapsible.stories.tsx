@@ -5,7 +5,7 @@ import Collapsible from "./Collapsible";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Collapsible",
+  title: "Utilities/Collapsible",
   component: Collapsible,
 } as ComponentMeta<typeof Collapsible>;
 

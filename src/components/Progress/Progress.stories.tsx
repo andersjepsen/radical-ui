@@ -4,7 +4,7 @@ import Progress from "./Progress";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Progress",
+  title: "Visualizations/Progress",
   component: Progress,
 } as ComponentMeta<typeof Progress>;
 

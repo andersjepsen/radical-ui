@@ -4,7 +4,7 @@ import Switch from "./Switch";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Switch",
+  title: "Input/Switch",
   component: Switch,
 } as ComponentMeta<typeof Switch>;
 
