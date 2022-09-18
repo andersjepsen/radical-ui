@@ -1,4 +1,4 @@
-import { css, theme } from "../../stitches.config";
+import { css } from "../../stitches.config";
 
 const alignSelfVariant = css({
   variants: {

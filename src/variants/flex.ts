@@ -1,4 +1,4 @@
-import { css, theme } from "../../stitches.config";
+import { css } from "../../stitches.config";
 
 const flexVariant = css({
   variants: {
