@@ -2,6 +2,8 @@ import { styled } from "../../../stitches.config";
 import {
   alignItemsVariant,
   alignSelfVariant,
+  fillVariant,
+  flexBasisVariant,
   flexVariant,
   justifyContentVariant,
   overflowVariant,
@@ -12,6 +14,8 @@ const Box = styled(
   "div",
   alignItemsVariant,
   alignSelfVariant,
+  fillVariant,
+  flexBasisVariant,
   flexVariant,
   justifyContentVariant,
   overflowVariant,

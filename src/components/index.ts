@@ -8,3 +8,4 @@ export { default as Header } from "./Header";
 export { default as Progress } from "./Progress";
 export { default as Slider } from "./Slider";
 export { default as Switch } from "./Switch";
+export { default as Main } from "./Main";
