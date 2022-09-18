@@ -62,13 +62,16 @@ export interface AvatarProps {
   alt: string;
 }
 
-function Avatar({ variant, size, src = "", alt }: AvatarProps) {
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof StyledAvatar>,
+  React.ComponentPropsWithoutRef<typeof StyledAvatar> & AvatarProps
+>(({ src = "", alt, ...props }, forwardedRef) => {
   return (
-    <StyledAvatar variant={variant} size={size}>
+    <StyledAvatar {...props}>
       <StyledImage src={src} alt={alt} />
       <StyledFallback delayMs={500}>{getInitials(alt)}</StyledFallback>
     </StyledAvatar>
   );
-}
+});
 
 export default Avatar;
