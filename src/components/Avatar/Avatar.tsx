@@ -67,7 +67,7 @@ const Avatar = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof StyledAvatar> & AvatarProps
 >(({ src = "", alt, ...props }, forwardedRef) => {
   return (
-    <StyledAvatar {...props}>
+    <StyledAvatar ref={forwardedRef} {...props}>
       <StyledImage src={src} alt={alt} />
       <StyledFallback delayMs={500}>{getInitials(alt)}</StyledFallback>
     </StyledAvatar>
