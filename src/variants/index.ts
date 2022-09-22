@@ -6,3 +6,4 @@ export { default as flexBasisVariant } from "./flexBasis";
 export { default as justifyContentVariant } from "./justifyContent";
 export { default as overflowVariant } from "./overflow";
 export { default as paddingVariant } from "./padding";
+export { default as textAlignVariant } from "./textAlign";
