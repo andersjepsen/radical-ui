@@ -1,4 +1,4 @@
-import { styled } from "../../../stitches.config";
+import { styled, theme } from "../../../stitches.config";
 import {
   alignItemsVariant,
   alignSelfVariant,
@@ -25,6 +25,23 @@ const Box = styled(
     boxSizing: "border-box",
     maxWidth: "100%",
     variants: {
+      borderRadius: {
+        sm: {
+          borderRadius: theme.radii.sm,
+        },
+        md: {
+          borderRadius: theme.radii.md,
+        },
+        lg: {
+          borderRadius: theme.radii.lg,
+        },
+        round: {
+          borderRadius: theme.radii.round,
+        },
+        pill: {
+          borderRadius: theme.radii.pill,
+        },
+      },
       direction: {
         row: {
           flexDirection: "row",

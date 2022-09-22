@@ -101,5 +101,13 @@ export const {
       width: value,
       height: value,
     }),
+    paddingX: (value: Stitches.ScaleValue<"space">) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    paddingY: (value: Stitches.ScaleValue<"space">) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
   },
 });
