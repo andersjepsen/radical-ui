@@ -11,3 +11,4 @@ export { default as Slider } from "./Slider";
 export { default as Switch } from "./Switch";
 export { default as Text } from "./Text";
 export { default as TextField } from "./TextField";
+export { default as Button } from "./Button";
