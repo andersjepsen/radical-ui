@@ -1,22 +1,8 @@
 import { styled, theme } from "../../../stitches.config";
-import { alignSelfVariant } from "../../variants";
+import { alignSelfVariant, textAlignVariant } from "../../variants";
 
-const Text = styled("span", alignSelfVariant, {
+const Text = styled("span", alignSelfVariant, textAlignVariant, {
   variants: {
-    textAlign: {
-      start: {
-        textAlign: "start",
-      },
-      center: {
-        textAlign: "center",
-      },
-      end: {
-        textAlign: "end",
-      },
-      justify: {
-        textAlign: "justify",
-      },
-    },
     truncate: {
       true: {
         overflow: "hidden",
@@ -90,7 +76,6 @@ const Text = styled("span", alignSelfVariant, {
     },
   },
   defaultVariants: {
-    textAlign: "start",
     truncate: false,
     wordBreak: "normal",
     size: "medium",
