@@ -52,11 +52,6 @@ const StyledButton = styled("button", paddingVariant, {
       },
     },
   },
-
-  defaultVariants: {
-    color: "default",
-    padding: "md",
-  },
 });
 
 export interface ButtonProps {
@@ -67,18 +62,35 @@ export interface ButtonProps {
 const Button = React.forwardRef<
   React.ElementRef<typeof StyledButton>,
   React.ComponentPropsWithoutRef<typeof StyledButton> & ButtonProps
->(({ icon, iconPosition = "start", children, ...props }, forwardedRef) => {
-  const iconElement = () => <Box alignItems="center">{icon}</Box>;
+>(
+  (
+    {
+      icon,
+      iconPosition = "start",
+      color = "default",
+      padding = "md",
+      children,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const iconElement = () => <Box alignItems="center">{icon}</Box>;
 
-  return (
-    <StyledButton ref={forwardedRef} {...props}>
-      <Box direction="row" alignItems="center">
-        {icon && iconPosition === "start" && iconElement()}
-        {children}
-        {icon && iconPosition === "end" && iconElement()}
-      </Box>
-    </StyledButton>
-  );
-});
+    return (
+      <StyledButton
+        ref={forwardedRef}
+        color={color}
+        padding={padding}
+        {...props}
+      >
+        <Box direction="row" alignItems="center">
+          {icon && iconPosition === "start" && iconElement()}
+          {children}
+          {icon && iconPosition === "end" && iconElement()}
+        </Box>
+      </StyledButton>
+    );
+  }
+);
 
 export default Button;
