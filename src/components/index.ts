@@ -8,6 +8,7 @@ export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
 export { default as Main } from "./Main";
 export { default as Progress } from "./Progress";
+export { default as Provider } from "./Provider";
 export { default as Select } from "./Select";
 export { default as Slider } from "./Slider";
 export { default as Switch } from "./Switch";
