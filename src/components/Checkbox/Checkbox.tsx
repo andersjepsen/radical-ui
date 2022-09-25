@@ -12,9 +12,11 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  border: `${theme.borderWidths[1]} solid ${theme.colors.blackA5}`,
+  boxShadow: `0 0 0 1px ${theme.colors.blackA7}`,
+  "&:focus": {
+    boxShadow: `0 0 0 2px ${theme.colors.blue7}`,
+  },
   "&:hover": { backgroundColor: theme.colors.blackA2 },
-  "&:focus": { boxShadow: `0 0 0 1px ${theme.colors.blackA7}` },
   "&[data-disabled]": {
     backgroundColor: theme.colors.blackA2,
   },
