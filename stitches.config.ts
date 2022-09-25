@@ -1,4 +1,15 @@
-import { blackA, blue, gray, green, red, yellow } from "@radix-ui/colors";
+import {
+  blackA,
+  blue,
+  blueA,
+  gray,
+  green,
+  greenA,
+  red,
+  redA,
+  yellow,
+  yellowA,
+} from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches } from "@stitches/react";
 
@@ -27,6 +38,12 @@ export const {
       ...blue,
       ...yellow,
       ...green,
+
+      //color alphas
+      ...redA,
+      ...blueA,
+      ...yellowA,
+      ...greenA,
       white: "#fff",
       black: "#000",
     },

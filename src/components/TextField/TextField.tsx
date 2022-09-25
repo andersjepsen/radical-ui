@@ -4,9 +4,26 @@ import { textAlignVariant } from "../../variants";
 import Box from "../Box";
 
 const StyledBox = styled(Box, {
-  boxShadow: `0 0 0 1px ${theme.colors.blackA7}`,
+  $$shadowColor: theme.colors.blackA7,
+  boxShadow: `0 0 0 1px $$shadowColor`,
   "&:focus-within": {
-    boxShadow: `0 0 0 2px ${theme.colors.blue7}`,
+    boxShadow: `0 0 0 2px $$shadowColor`,
+  },
+  variants: {
+    color: {
+      primary: {
+        $$shadowColor: theme.colors.blueA7,
+      },
+      success: {
+        $$shadowColor: theme.colors.greenA7,
+      },
+      warning: {
+        $$shadowColor: theme.colors.yellowA7,
+      },
+      error: {
+        $$shadowColor: theme.colors.redA7,
+      },
+    },
   },
 });
 
@@ -34,35 +51,41 @@ export interface TextFieldProps {
   adornmentPosition?: "start" | "end";
 }
 
-type Test = Stitches.VariantProps<typeof StyledBox>;
-
 const TextField = React.forwardRef<
   React.ElementRef<typeof StyledInput>,
-  React.ComponentPropsWithoutRef<typeof StyledInput> & TextFieldProps
->(({ adornment, adornmentPosition = "start", ...props }, forwardedRef) => {
-  const adornmentElement = () => (
-    <Box
-      alignItems="center"
-      css={{
-        padding: theme.space[1],
-      }}
-    >
-      {adornment}
-    </Box>
-  );
+  React.ComponentPropsWithoutRef<typeof StyledInput> &
+    TextFieldProps &
+    Stitches.VariantProps<typeof StyledBox>
+>(
+  (
+    { adornment, adornmentPosition = "start", color, ...props },
+    forwardedRef
+  ) => {
+    const adornmentElement = () => (
+      <Box
+        alignItems="center"
+        css={{
+          padding: theme.space[1],
+        }}
+      >
+        {adornment}
+      </Box>
+    );
 
-  return (
-    <StyledBox
-      borderRadius="md"
-      direction="row"
-      alignItems="center"
-      padding="sm"
-    >
-      {adornment && adornmentPosition === "start" && adornmentElement()}
-      <StyledInput ref={forwardedRef} {...props} />
-      {adornment && adornmentPosition === "end" && adornmentElement()}
-    </StyledBox>
-  );
-});
+    return (
+      <StyledBox
+        borderRadius="md"
+        direction="row"
+        alignItems="center"
+        padding="sm"
+        color={color}
+      >
+        {adornment && adornmentPosition === "start" && adornmentElement()}
+        <StyledInput ref={forwardedRef} {...props} />
+        {adornment && adornmentPosition === "end" && adornmentElement()}
+      </StyledBox>
+    );
+  }
+);
 
 export default TextField;

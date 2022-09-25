@@ -11,27 +11,42 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof TextField> = (args) => (
+const Template: ComponentStory<typeof TextField> = () => (
   <>
     <Box padding="md">
-      <TextField {...args} />
+      <TextField />
     </Box>
     <Box padding="md">
-      <TextField {...args} adornment={<MagnifyingGlassIcon />} />
+      <TextField adornment={<MagnifyingGlassIcon />} />
     </Box>
     <Box padding="md">
-      <TextField
-        {...args}
-        adornment={<MagnifyingGlassIcon />}
-        adornmentPosition="end"
-      />
+      <TextField adornment={<MagnifyingGlassIcon />} adornmentPosition="end" />
     </Box>
     <Box padding="md">
-      <TextField {...args} adornment={"kr."} adornmentPosition="end" />
+      <TextField adornment="kr." adornmentPosition="end" />
+    </Box>
+  </>
+);
+
+const ColorTemplate: ComponentStory<typeof TextField> = () => (
+  <>
+    <Box padding="sm">
+      <TextField placeholder="Default" />
+    </Box>
+    <Box padding="sm">
+      <TextField color="primary" placeholder="Primary" />
+    </Box>
+    <Box padding="sm">
+      <TextField color="success" placeholder="Success" />
+    </Box>
+    <Box padding="sm">
+      <TextField color="warning" placeholder="Warning" />
+    </Box>
+    <Box padding="sm">
+      <TextField color="error" placeholder="Error" />
     </Box>
   </>
 );
 
 export const Primary = Template.bind({});
-
-Primary.args = {};
+export const Colors = ColorTemplate.bind({});

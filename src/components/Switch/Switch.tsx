@@ -1,46 +1,45 @@
 import * as SwitchPrimitive from "@radix-ui/react-switch";
 import React from "react";
-import { theme, styled, Stitches } from "../../../stitches.config";
+import { styled, theme } from "../../../stitches.config";
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
+  $$color: theme.colors.blackA5,
+  $$shadowColor: theme.colors.blackA7,
   all: "unset",
   width: theme.sizes[7],
   height: theme.sizes[5],
   backgroundColor: theme.colors.blackA9,
   borderRadius: theme.radii.pill,
   position: "relative",
-  boxShadow: `0 2px 10px ${theme.colors.blackA7}`,
-  "&:focus": { boxShadow: `0 0 0 2px ${theme.colors.blackA7}` },
+  boxShadow: `0 0 0 1px $$shadowColor`,
+  "&:focus": { boxShadow: `0 0 0 2px $$shadowColor` },
+  '&[data-state="checked"]': {
+    backgroundColor: "$$color",
+  },
   variants: {
     color: {
       primary: {
-        '&[data-state="checked"]': {
-          backgroundColor: theme.colors.blue9,
-        },
+        $$color: theme.colors.blue9,
+        $$shadowColor: theme.colors.blueA7,
       },
       success: {
-        '&[data-state="checked"]': {
-          backgroundColor: theme.colors.green9,
-        },
+        $$color: theme.colors.green9,
+        $$shadowColor: theme.colors.greenA7,
       },
       warning: {
-        '&[data-state="checked"]': {
-          backgroundColor: theme.colors.yellow9,
-        },
+        $$color: theme.colors.yellow9,
+        $$shadowColor: theme.colors.yellowA7,
       },
       error: {
-        '&[data-state="checked"]': {
-          backgroundColor: theme.colors.red9,
-        },
+        $$color: theme.colors.red9,
+        $$shadowColor: theme.colors.redA7,
       },
     },
-  },
-  defaultVariants: {
-    color: "primary",
   },
 });
 
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
+  $$color: theme.colors.gray3,
   display: "block",
   width: theme.sizes[4],
   height: theme.sizes[4],
@@ -52,32 +51,24 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
   willChange: "transform",
   '&[data-state="checked"]': { transform: "translateX(25px)" },
   "&:focus": { boxShadow: `0 0 0 5px ${theme.colors.blackA8}` },
+  "&:hover": {
+    backgroundColor: "$$color",
+  },
   variants: {
     color: {
       primary: {
-        "&:hover": {
-          backgroundColor: theme.colors.blue3,
-        },
+        $$color: theme.colors.blue3,
       },
       success: {
-        "&:hover": {
-          backgroundColor: theme.colors.green3,
-        },
+        $$color: theme.colors.green3,
       },
       warning: {
-        "&:hover": {
-          backgroundColor: theme.colors.yellow3,
-        },
+        $$color: theme.colors.yellow3,
       },
       error: {
-        "&:hover": {
-          backgroundColor: theme.colors.red3,
-        },
+        $$color: theme.colors.red3,
       },
     },
-  },
-  defaultVariants: {
-    color: "primary",
   },
 });
 
