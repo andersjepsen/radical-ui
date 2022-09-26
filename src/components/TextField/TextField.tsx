@@ -35,7 +35,7 @@ const StyledInput = styled("input", textAlignVariant, {
   margin: "0",
   outline: "none",
   width: "100%",
-  height: theme.sizes[5],
+  height: theme.sizes.xxs,
   color: "inherit",
 
   "&::before": {

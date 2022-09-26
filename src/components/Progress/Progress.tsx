@@ -7,7 +7,7 @@ const StyledProgress = styled(ProgressPrimitive.Root, {
   overflow: "hidden",
   background: theme.colors.blackA5,
   borderRadius: theme.radii.pill,
-  height: theme.sizes[2],
+  height: theme.space[2],
   // Fix overflow clipping in Safari
   // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0
   transform: "translateZ(0)",

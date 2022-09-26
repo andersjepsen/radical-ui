@@ -7,7 +7,7 @@ import Label from "../Label";
 const StyledCheckbox = styled(CheckboxPrimitive.Root, {
   all: "unset",
   backgroundColor: theme.colors.white,
-  size: theme.sizes[4],
+  size: theme.sizes.xxs,
   borderRadius: theme.radii.md,
   display: "flex",
   alignItems: "center",

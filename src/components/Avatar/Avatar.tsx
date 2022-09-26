@@ -4,33 +4,37 @@ import { styled, theme } from "../../../stitches.config";
 import { getInitials } from "../../helpers/getInitials";
 
 const StyledAvatar = styled(AvatarPrimitive.Root, {
+  $$size: theme.sizes.xs,
+  $$radius: theme.radii.round,
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
   verticalAlign: "middle",
   overflow: "hidden",
   backgroundColor: theme.colors.blackA3,
-  borderRadius: theme.radii.round,
+  borderRadius: "$$radius",
+  height: "$$size",
+  width: "$$size",
   variants: {
     variant: {
       circle: {
-        borderRadius: theme.radii.round,
+        $$radius: theme.radii.round,
       },
       square: {
-        borderRadius: 0,
+        $$radius: 0,
       },
       rounded: {
-        borderRadius: theme.radii.md,
+        $$radius: theme.radii.md,
       },
     },
     size: {
       sm: {
-        size: theme.sizes[4],
+        $$size: theme.sizes.xxs,
       },
       md: {
-        size: theme.sizes[6],
+        $$size: theme.sizes.xs,
       },
-      lg: { size: theme.sizes[8] },
+      lg: { $$size: theme.sizes.sm },
     },
   },
   defaultVariants: {
@@ -56,8 +60,6 @@ const StyledFallback = styled(AvatarPrimitive.Fallback, {
 });
 
 export interface AvatarProps {
-  variant?: "circle" | "square" | "rounded";
-  size?: "sm" | "md" | "lg";
   src: string;
   alt: string;
 }

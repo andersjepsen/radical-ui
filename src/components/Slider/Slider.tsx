@@ -3,17 +3,18 @@ import React from "react";
 import { theme, styled, Stitches } from "../../../stitches.config";
 
 const StyledSlider = styled(SliderPrimitive.Root, {
+  $$size: `calc(${theme.sizes.xxs} - 4px)`,
   position: "relative",
   display: "flex",
   alignItems: "center",
   userSelect: "none",
   touchAction: "none",
   '&[data-orientation="horizontal"]': {
-    height: theme.sizes[4],
+    height: "$$size",
   },
   '&[data-orientation="vertical"]': {
     flexDirection: "column",
-    width: theme.sizes[4],
+    width: "$$size",
   },
 });
 
@@ -56,10 +57,11 @@ const StyledRange = styled(SliderPrimitive.Range, {
 type RangeProps = Stitches.VariantProps<typeof StyledRange>;
 
 const StyledThumb = styled(SliderPrimitive.Thumb, {
+  $$size: `calc(${theme.sizes.xxs} - 4px)`,
   all: "unset",
   display: "block",
-  width: theme.sizes[4],
-  height: theme.sizes[4],
+  width: "$$size",
+  height: "$$size",
   backgroundColor: theme.colors.white,
   boxShadow: `0 2px 10px ${theme.colors.blackA7}`,
   borderRadius: theme.radii.round,
