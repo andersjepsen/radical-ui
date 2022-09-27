@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/andersjepsen"
   },
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "a radical design system",
   "author": "Anders Jepsen",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "@babel/core": "^7.19.0",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.0.0",
-    "@rollup/plugin-typescript": "^8.5.0",
+    "@rollup/plugin-typescript": "8.3.3",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
