@@ -79,11 +79,20 @@ const Box = styled(
           alignContent: "stretch",
         },
       },
+      wrap: {
+        wrap: {
+          flexWrap: "wrap",
+        },
+        nowrap: {
+          flexWrap: "nowrap",
+        },
+      },
       width: generateSizeVariants("width"),
     },
     defaultVariants: {
       direction: "column",
       alignContent: "stretch",
+      wrap: "wrap",
     },
   }
 );
