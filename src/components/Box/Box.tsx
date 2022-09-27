@@ -1,10 +1,12 @@
 import { styled, theme } from "../../../stitches.config";
+import { generateSizeVariants } from "../../helpers/generateSizeVariants";
 import {
   alignItemsVariant,
   alignSelfVariant,
   fillVariant,
   flexBasisVariant,
   flexVariant,
+  gapVariant,
   justifyContentVariant,
   overflowVariant,
   paddingVariant,
@@ -17,6 +19,7 @@ const Box = styled(
   fillVariant,
   flexBasisVariant,
   flexVariant,
+  gapVariant,
   justifyContentVariant,
   overflowVariant,
   paddingVariant,
@@ -76,6 +79,7 @@ const Box = styled(
           alignContent: "stretch",
         },
       },
+      width: generateSizeVariants("width"),
     },
     defaultVariants: {
       direction: "column",
