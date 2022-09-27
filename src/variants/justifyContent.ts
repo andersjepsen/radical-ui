@@ -4,10 +4,10 @@ const justifyContentVariant = css({
   variants: {
     justifyContent: {
       around: {
-        justifyContent: "around",
+        justifyContent: "space-around",
       },
       between: {
-        justifyContent: "between",
+        justifyContent: "space-between",
       },
       center: {
         justifyContent: "center",
@@ -16,7 +16,7 @@ const justifyContentVariant = css({
         justifyContent: "end",
       },
       evenly: {
-        justifyContent: "evenly",
+        justifyContent: "space-evenly",
       },
       start: {
         justifyContent: "start",

@@ -60,7 +60,7 @@ const StyledFallback = styled(AvatarPrimitive.Fallback, {
 });
 
 export interface AvatarProps {
-  src: string;
+  src?: string;
   alt: string;
 }
 
