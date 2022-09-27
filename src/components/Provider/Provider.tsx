@@ -8,11 +8,14 @@ import {
 const Provider = ({
   children,
   tooltipProps,
+  globalCss,
 }: {
   children: React.ReactNode;
   tooltipProps?: TooltipProviderProps;
+  globalCss?: () => void;
 }) => {
   globalStyles();
+  globalCss?.();
 
   return <TooltipProvider {...tooltipProps}>{children}</TooltipProvider>;
 };
