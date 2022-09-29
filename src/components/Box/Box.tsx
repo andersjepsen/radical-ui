@@ -4,7 +4,6 @@ import {
   alignItemsVariant,
   alignSelfVariant,
   fillVariant,
-  flexBasisVariant,
   flexVariant,
   gapVariant,
   justifyContentVariant,
@@ -17,7 +16,6 @@ const Box = styled(
   alignItemsVariant,
   alignSelfVariant,
   fillVariant,
-  flexBasisVariant,
   flexVariant,
   gapVariant,
   justifyContentVariant,
@@ -88,6 +86,7 @@ const Box = styled(
         },
       },
       width: generateSizeVariants("width"),
+      flexBasis: generateSizeVariants("flexBasis"),
     },
     defaultVariants: {
       direction: "column",
