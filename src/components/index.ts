@@ -9,6 +9,7 @@ export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
 export { default as Label } from "./Label";
 export { default as Main } from "./Main";
+export { default as Navigation } from "./Navigation";
 export { default as Progress } from "./Progress";
 export { default as Provider } from "./Provider";
 export { default as Select } from "./Select";

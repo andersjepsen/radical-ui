@@ -5,6 +5,7 @@ import Avatar from "../Avatar";
 import Box from "../Box";
 import Header from "./Header";
 import Text from "../Text";
+import Navigation from "../Navigation";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -28,12 +29,22 @@ const Template: ComponentStory<typeof Header> = (args) => (
         John Doe
       </Text>
     </Box>
-    <Box direction="row" gap="md">
-      <Text>Home</Text>
-      <Text>Portfolio</Text>
-      <Text>About</Text>
-      <Text>Contact</Text>
-    </Box>
+    <Navigation>
+      <Navigation.List>
+        <Navigation.Item>
+          <Navigation.Link href="#">Home</Navigation.Link>
+        </Navigation.Item>
+        <Navigation.Item>
+          <Navigation.Link href="#">Portfolio</Navigation.Link>
+        </Navigation.Item>
+        <Navigation.Item>
+          <Navigation.Link href="#">About</Navigation.Link>
+        </Navigation.Item>
+        <Navigation.Item>
+          <Navigation.Link href="#">Contact</Navigation.Link>
+        </Navigation.Item>
+      </Navigation.List>
+    </Navigation>
   </Header>
 );
 
